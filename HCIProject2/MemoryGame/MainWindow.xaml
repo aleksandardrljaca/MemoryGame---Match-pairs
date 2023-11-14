@@ -1,0 +1,30 @@
+﻿<Window x:Class="MemoryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryGame"
+        mc:Ignorable="d"
+        Title="MemoryGame" Background="#1a232e" Height="600" Width="500">
+
+    <Grid>
+        <Label Content=" Welcome to Memory game!" FontFamily="Rockwell" Foreground="Coral" FontSize="20" Margin="112,43,91,468"></Label>
+        <Label Content="Please select category" Margin="140,202,63,316" FontFamily="Rockwell" Foreground="Coral" FontSize="20"></Label>
+        <ComboBox Name="chooseCategorieBox" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="169,253,0,0"  Height="30">
+
+            <ComboBoxItem Name="animalsItem" Content="Animals" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16" />
+            <ComboBoxItem Name="fruitsItem" Content="Fruits" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16" />
+
+
+        </ComboBox>
+        <Button Click="PlayButtonClick" Content="Play" FontFamily="Rockwell" FontSize="20" FontWeight="Bold" BorderBrush="Orange" BorderThickness="2"  Background="LightGreen" Foreground="black" Margin="140,442,135,73" RenderTransformOrigin="0.522,0.745">
+
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
