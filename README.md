@@ -6,4 +6,3 @@ Game for Human-Computer Interaction course featuring the use of WPF
 ![Playing](https://github.com/aleksandardrljaca/MemoryGame---Match-pairs/blob/main/playing.png)
 
 
-NOTE: Only animal category implemented - missing path and images
