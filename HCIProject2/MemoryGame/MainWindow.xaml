@@ -1,0 +1,41 @@
+﻿<Window x:Class="MemoryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryGame"
+        mc:Ignorable="d"
+        Title="Memory Game" Background="#1a232e" Height="600" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Label Content="WELCOME TO MEMORY GAME!" FontFamily="Rockwell" Foreground="Coral" FontSize="20" Margin="0,0,0,10"/>
+            <Button Click="ScoresClicked" Content="Scores" FontWeight="Bold" BorderBrush="Orange" BorderThickness="2" Background="LightGreen" Foreground="Black" Margin="0,0,0,20"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="351" Margin="128,150,128,70">
+            <Label Content="Please select category" FontFamily="Rockwell" Foreground="Coral" FontSize="20" Margin="0,0,0,5"/>
+            <ComboBox Name="chooseCategorieBox" Width="199" Height="30" Margin="0,0,0,10" Background="White">
+                <ComboBoxItem Name="animalsItem" Content="Animals" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16"/>
+                <ComboBoxItem Name="fruitsItem" Content="Fruits" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16"/>
+            </ComboBox>
+
+            <Label Content="Choose level of difficulty" FontFamily="Rockwell" Foreground="Coral" FontSize="20" Margin="0,0,0,5"/>
+            <ComboBox Name="chooseDifficultyBox" Width="198" Height="30" Margin="0,0,0,10" Background="White">
+                <ComboBoxItem Name="easyItem" Content="Easy" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16"/>
+                <ComboBoxItem Name="mediumItem" Content="Medium" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16"/>
+                <ComboBoxItem Name="hardItem" Content="Hard" FontFamily="Rockwell" Foreground="Black" Background="DarkGray" FontSize="16"/>
+            </ComboBox>
+
+            <Label Content="          Player name" FontFamily="Rockwell" Foreground="Coral" FontSize="20" Margin="0,0,0,5"/>
+            <TextBox Name="playerNameTBox" Background="White" Width="200" FontSize="20" Margin="0,0,0,20"/>
+            <Button Click="PlayButtonClick" Content="Play" FontFamily="Rockwell" FontSize="20" Margin="0,60,0,0" FontWeight="Bold" BorderBrush="Orange" BorderThickness="2" Background="LightGreen" Foreground="Black">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
